@@ -1,1 +1,79 @@
-<p>profile works!</p>
+
+<div class="Overlay">
+    <div class="container">
+    <app-searchform (searchOutput)="searchs($event)"></app-searchform>
+    <div *ngIf="user">
+    <div class="container">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title mt-3 mb-3" style="font-size: 20px;"><strong>GitHub Name{{user.name}}: </strong></h3>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <img class="img-thumbnail mb-3" src="{{user.avatar_url}}"  style="width:300px; height:300px"><br>
+                <a class="btn btn-primary mb-3" target="_blank" href="{{user.html_url}}">View Profile</a>
+              </div>
+      
+              <div class="col-md-8 col-sm-8 col-xs-12">
+                <div class="stats">
+                  <span class="badge bg-danger m-2">{{user.public_repos}}<strong>Repositories </strong> </span>
+                  <span class="badge bg-success m-2">{{user.followers}}<strong>Fellowers</strong></span>
+                  <span class="badge bg-info">{{user.following}} <strong>Fellowing</strong></span>
+                 
+                </div>
+                <br/>
+                <ul class="list-group">
+                  <li appHighlight class="list-group-item">
+                    <strong>Username: </strong>{{user.name}}
+                  </li>
+                  <li appHighlight class="list-group-item">
+                    <strong>Location: </strong>{{user.location}}
+                  </li>
+                  <li appHighlight class="list-group-item">
+                    <strong>Email: </strong>{{user.email}}
+                  </li>
+                  <li appHighlight class="list-group-item">
+                    <strong>Created at: </strong>{{user.created_at | datePipe}} 
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+    
+    <div class="container">
+      <div class="card" *ngFor="let repository of repo" style="width: 22rem;">
+        <div class="card-body">
+          <h5 class="card-title"><strong>Repo Name:</strong> &nbsp;{{repository.name}} </h5>
+          <div class="card-text">
+            <hr>
+            <div class="desc"><span >Description:</span> &nbsp;{{repository.description}} 
+            </div>
+            <hr>
+            <div class="card-subtitle mb-2">
+                <span >Language: </span> {{repository.language}}
+            </div>
+            <div class="card-subtitle mb-2"><span>Created On:</span> &nbsp;{{repository.created_at | datePipe}}</div>
+          </div>
+          </div>
+          <div class="card-footer">
+            <div class="btn-group" role="group" aria-label="Third group">
+              <button class="btn btn-sm btn-info"><i class="fa fa-eye" style="font-size:16px"></i> {{repository.watchers}}</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Third group">
+              <button class="btn btn-sm btn-outline-danger"><i class="fa fa-code-fork" style="font-size:16px"></i> {{repository.forks}}</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Third group">
+              <button class="btn btn-sm btn-success" id="visit"><a href="{{repository.html_url}}" class="card-link">Visit &nbsp; <i class="fa fa-arrow-circle-right" style="font-size:16px"></i></a> </button> 
+            </div>
+          </div>
+      </div>
+    </div>
+    
+      </div>
+      
+    </div>
+    
