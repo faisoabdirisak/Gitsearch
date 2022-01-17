@@ -1,0 +1,8 @@
+body {
+    background-image: url("src/assets/pexels-sagui-andrea-618833.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    
+  }
