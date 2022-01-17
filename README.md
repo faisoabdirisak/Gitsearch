@@ -32,9 +32,9 @@ Consists of two main components.
 
 * git clone ```https://github.com/faisoabdirisak/Gitsearch.git```
 
-* cd Git-Search
+* cd Gitsearch
 
-* code . or atom . based on the text editor you have.
+* code . or atom . based on the text editor you like.
 
 * Run ng serve for a dev server. 
 
