@@ -1,1 +1,22 @@
-<p>searchform works!</p>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h4>Github user profile search</h4>
+                </div>
+                <div class="card-body">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <input  name="searchName" type="search" class="form-control" placeholder="Github user name " arial-label="search" [(ngModel)]="searchName" >
+                        </div>
+                    
+                        <div>
+                            <button class="btn btn-primary btn-sm mt-3" (click)="search()">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
