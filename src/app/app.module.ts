@@ -8,6 +8,7 @@ import { RepositoriesComponent } from './repositories/repositories.component';
 import { SearchformComponent } from './searchform/searchform.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HighlightDirective } from './highlight.directive';
+import { DatePipePipe } from './date-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HighlightDirective } from './highlight.directive';
     RepositoriesComponent,
     SearchformComponent,
     NavbarComponent,
-    HighlightDirective
+    HighlightDirective,
+    DatePipePipe
   ],
   imports: [
     BrowserModule,
