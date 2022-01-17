@@ -7,6 +7,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { SearchformComponent } from './searchform/searchform.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     ProfileComponent,
     RepositoriesComponent,
     SearchformComponent,
-    NavbarComponent
+    NavbarComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
