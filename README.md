@@ -21,7 +21,7 @@ This is Agular CLI application that allows a user to enter a GitHub username int
 
 ## Screenshot
 
-<img src= " " width="800px" height="400px">
+<img src= "src/assets/Screenshot from 2022-01-17 19-18-41.png" width="800px" height="400px">
 
 
 
